@@ -1,0 +1,31 @@
+You have 3 layers.
+
+1. (app layer) server.js
+  configure express app to handle expected requests
+    * get index page
+    * create item
+    * get item(s)
+    * update items
+    * delete item
+2. (DB layer) database.js
+  respond to app requests
+    * create
+    * read
+    * update
+    * delete
+3. (presentation layer) public folder with index.html presents the data
+
+
+0. configure app
+1. app server listening for requests
+2. client sends valid request ('/')
+3. server responds with index.html
+4. client sends valid request ('/items')
+5. server requests data from database with async function. we don't know how long db will take to respond so run this in the background.
+6. 'await' means don't continue main processing until the data comes in. We don't want to return empty handed.
+7. once we get the data, return it in json format
+
+
+
+
+
